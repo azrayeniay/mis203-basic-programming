@@ -58,9 +58,7 @@ if ticket_count == 0:
     print("No tickets sold.")
 else:
     average_price = total_revenue / ticket_count
-    print(
-        f"Tickets sold: {ticket_count} "
-        f"Total revenue: {total_revenue:.2f} TRY "
-        f"Average price: {average_price:.2f} TRY "
-        f"Free tickets: {free_tickets}"
-    )
+    print(f"Tickets sold: {ticket_count}")
+    print(f"Total revenue: {total_revenue:.2f} TRY")
+    print(f"Average price: {average_price:.2f} TRY")
+    print(f"Free tickets: {free_tickets}")
