@@ -35,6 +35,9 @@ Day (weekday/weekend): weekend
 Student (yes/no): no
 musa: 125.00 TRY (Senior)
 Customer name (or q to quit): q
-Tickets sold: 3 Total revenue: 420.00 TRY Average price: 140.00 TRY Free tickets: 0
+Tickets sold: 3
+Total revenue: 420.00 TRY
+Average price: 140.00 TRY
+Free tickets: 0
 
 Why does the order of the rules matter? A 10 year old student qualifies for both the Child and Student discounts. Checking the Child rule first ensures the child discount is applied.
