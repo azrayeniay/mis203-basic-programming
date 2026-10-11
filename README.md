@@ -41,3 +41,7 @@ Average price: 140.00 TRY
 Free tickets: 0
 
 Why does the order of the rules matter? A 10 year old student qualifies for both the Child and Student discounts. Checking the Child rule first ensures the child discount is applied.
+
+## Week 03
+This code asks the user five questions about their preferred topic, research method, available time, difficulty level and question type. It randomly selects a research topic from the chosen area and displays it as a question. If an answer is invalid, the program asks that question again. Also it uses the "random" and "time" libraries.
+Note: The topic is selected randomly based on the chosen category, not based on the filters such as the time, method and difficulty level.
