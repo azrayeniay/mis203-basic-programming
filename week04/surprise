@@ -1,1 +1,216 @@
+import random
+import time
 
+print("Choose a topic area:")
+print("1. Science")
+print("2. History")
+print("3. Technology")
+print("4. Psychology")
+print("5. Environment")
+print("6. Art and culture")
+print("7. Society")
+print("8. Health")
+print("9. Space")
+print("10. Business")
+
+while True:
+    area = input("Your choice (1-10): ")
+
+    if area in ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]:
+        break
+    else:
+        print("Invalid choice. Please choose a number from 1 to 10.")
+
+while True:
+    method = input(
+        "How would you like to explore it? "
+        "(reading / video / podcast): "
+    ).lower()
+
+    if method == "reading" or method == "video" or method == "podcast":
+        break
+    else:
+        print("Invalid choice. Please answer reading, video, or podcast.")
+
+while True:
+    time_available = input(
+        "How much time do you have? (15 / 30 / 60 minutes): "
+    )
+
+    if (time_available == "15" or
+        time_available == "30" or
+        time_available == "60"):
+        break
+    else:
+        print("Invalid choice. Please choose 15, 30, or 60.")
+
+while True:
+    difficulty = input(
+        "What difficulty level do you prefer? "
+        "(easy / medium / challenging): "
+    ).lower()
+
+    if (difficulty == "easy" or
+        difficulty == "medium" or
+        difficulty == "challenging"):
+        break
+    else:
+        print("Invalid choice. Please answer easy, medium, or challenging.")
+
+while True:
+    question_type = input(
+        "What kind of question interests you? "
+        "(how / history / effects / future): "
+    ).lower()
+
+    if (question_type == "how" or
+        question_type == "history" or
+        question_type == "effects" or
+        question_type == "future"):
+        break
+    else:
+        print("Invalid choice. Please answer how, history, effects, or future.")
+
+if area == "1":
+    topics = [
+        "black holes",
+        "animal communication",
+        "renewable energy",
+        "how vaccines work",
+        "deep-sea life",
+        "the human brain",
+        "how electricity works",
+        "plastic recycling"
+    ]
+elif area == "2":
+    topics = [
+        "ancient Egypt",
+        "the Silk Road",
+        "the printing press",
+        "the city of Pompeii",
+        "the history of the Olympic Games",
+        "the Maya civilization",
+        "the history of coffee",
+        "early explorers"
+    ]
+elif area == "3":
+    topics = [
+        "artificial intelligence",
+        "video games",
+        "robotics",
+        "how the internet works",
+        "the history of smartphones",
+        "3D printing",
+        "self-driving cars",
+        "cybersecurity"
+    ]
+elif area == "4":
+    topics = [
+        "human memory",
+        "dreams",
+        "habits",
+        "how emotions affect us",
+        "sleep and the brain",
+        "how people make decisions",
+        "attention and focus",
+        "body language"
+    ]
+elif area == "5":
+    topics = [
+        "ocean pollution",
+        "climate change",
+        "urban gardens",
+        "why bees are important",
+        "deforestation",
+        "microplastics",
+        "recycling at home",
+        "endangered animals"
+    ]
+elif area == "6":
+    topics = [
+        "street art",
+        "animation",
+        "traditional music",
+        "origami",
+        "the history of fashion",
+        "movie special effects",
+        "famous buildings",
+        "folk tales around the world"
+    ]
+elif area == "7":
+    topics = [
+        "social media",
+        "public libraries",
+        "urban life",
+        "public transportation",
+        "how languages change",
+        "school uniforms",
+        "volunteering",
+        "migration"
+    ]
+elif area == "8":
+    topics = [
+        "sleep",
+        "the immune system",
+        "daily exercise",
+        "the importance of drinking water",
+        "healthy eating",
+        "dental health",
+        "stress",
+        "the benefits of walking"
+    ]
+elif area == "9":
+    topics = [
+        "Mars exploration",
+        "the Moon",
+        "space telescopes",
+        "planets outside our solar system",
+        "the northern lights",
+        "the International Space Station",
+        "meteor showers",
+        "the possibility of life in space"
+    ]
+else:
+    topics = [
+        "online shopping",
+        "small businesses",
+        "advertising",
+        "how people use money",
+        "personal budgeting",
+        "how products are designed",
+        "fair trade",
+        "how delivery services work"
+    ]
+
+topic = random.choice(topics)
+
+if question_type == "how":
+    question = f"How does {topic} work?"
+elif question_type == "history":
+    question = f"How has {topic} changed over time?"
+elif question_type == "effects":
+    question = f"What effects does {topic} have?"
+else:
+    question = f"What might happen to {topic} in the future?"
+
+if time_available == "15":
+    time_text = "15-minute"
+elif time_available == "30":
+    time_text = "30-minute"
+else:
+    time_text = "60-minute"
+
+if method == "reading":
+    method_text = "reading"
+elif method == "video":
+    method_text = "watching a video"
+else:
+    method_text = "listening to a podcast"
+
+time.sleep(1)
+
+print(
+    f"{question} "
+    f"This is a {difficulty}, {time_text} topic "
+    f"to explore by {method_text}."
+)
